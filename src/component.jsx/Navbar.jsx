@@ -19,7 +19,7 @@ const Navbar = () => {
           <h1 className="font-bold text-2xl">React Course</h1>
         </div>
         <div className="flex justify-center items-center gap-7 text-l font-medium text-white">
-          <Link to="/">
+          <Link to="/intraction">
             <div className="relative inline-block text-left">
               <button
                 onClick={handlingbtn}
@@ -30,29 +30,29 @@ const Navbar = () => {
 
               {btntoggl && (
                 <div className="absolute right-0 mt-2 w-40 text-black bg-gray-200 rounded-md shadow-lg flex flex-col">
-                  <a
+                  <Link
                     href="#"
                     className="px-4 py-2 text-sm hover:bg-gray-300"
                   >
                     use_state
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="#"
                     className="px-4 py-2 text-sm hover:bg-gray-300"
                   >
                     hooks
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="#"
                     className="px-4 py-2 text-sm hover:bg-gray-300"
                   >
                     useeffect
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
           </Link>
-          <Link to="update">Home</Link>
+          <Link to="/">Home</Link>
         </div>
 
 
