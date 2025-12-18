@@ -25,7 +25,7 @@ const App = () => {
       
       </Routes> 
      
-    <Technical/>
+    
     
    </div>
    
