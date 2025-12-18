@@ -1,8 +1,15 @@
+import Count from "./Count"
 
 
 const Home = () => {
+
+
   return (
-    <div>Home</div>
+    <div>
+
+      <Count/>
+      
+    </div>
   )
 }
 

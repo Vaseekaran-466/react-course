@@ -31,19 +31,20 @@ const Navbar = () => {
               {btntoggl && (
                 <div className="absolute right-0 mt-2 w-40 text-black bg-gray-200 rounded-md shadow-lg flex flex-col">
                   <Link
-                    href="#"
+                    to="/usestate"
                     className="px-4 py-2 text-sm hover:bg-gray-300"
                   >
                     use_state
+                    
                   </Link>
                   <Link
-                    href="#"
+                    to="/hooks"
                     className="px-4 py-2 text-sm hover:bg-gray-300"
                   >
                     hooks
                   </Link>
                   <Link
-                    href="#"
+                    to="/useeffect"
                     className="px-4 py-2 text-sm hover:bg-gray-300"
                   >
                     useeffect
