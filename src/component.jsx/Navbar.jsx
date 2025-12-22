@@ -1,65 +1,83 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 
 const Navbar = () => {
-
   const [btntoggl, setBtntoggl] = useState(false)
 
   const handlingbtn = () => {
     setBtntoggl(!btntoggl)
-
   }
 
   return (
-    <>
+    <div className="bg-violet-300 p-4 flex justify-between items-center">
 
-      <div className=" bg-violet-300 p-4  flex justify-between items-center">
-        <div>
-          <h1 className="font-bold text-2xl">React Course</h1>
-        </div>
-        <div className="flex justify-center items-center gap-7 text-l font-medium text-white">
-          <Link to="/intraction">
-            <div className="relative inline-block text-left">
-              <button
-                onClick={handlingbtn}
-                className="flex items-center gap-2  text-white px-4 py-2 rounded">
-                 Intraction
-                <i className="fa-solid fa-chevron-down"></i>
-              </button>
+      <h1 className="font-bold text-2xl">React Course</h1>
 
-              {btntoggl && (
-                <div className="absolute right-0 mt-2 w-40 text-black bg-gray-200 rounded-md shadow-lg flex flex-col">
-                  <Link
-                    to="/usestate"
-                    className="px-4 py-2 text-sm hover:bg-gray-300"
-                  >
-                    use_state
-                    
-                  </Link>
-                  <Link
-                    to="/hooks"
-                    className="px-4 py-2 text-sm hover:bg-gray-300"
-                  >
-                    hooks
-                  </Link>
-                  <Link
-                    to="/useeffect"
-                    className="px-4 py-2 text-sm hover:bg-gray-300"
-                  >
-                    useeffect
-                  </Link>
-                </div>
-              )}
+      <div className="flex items-center gap-7 text-white font-medium">
+
+        {/* Dropdown */}
+        <div className="relative inline-block text-left">
+          <button
+            onClick={handlingbtn}
+            className="flex items-center gap-2 px-4 py-2 rounded bg-amber-200"
+          >
+            Intraction
+            <i className="fa-solid fa-chevron-down"></i>
+          </button>
+
+          {btntoggl && (
+            <div className="absolute right-0 mt-2 w-40 bg-gray-200 text-black rounded-md shadow-lg flex flex-col">
+
+              <NavLink
+                to="/usestate"
+                className={({ isActive }) =>
+                  isActive ? "bg-red-500 px-4 py-2 text-sm"
+                    : "px-4 py-2 text-sm hover:bg-gray-300"
+                }
+              >
+                useState
+                
+              </NavLink>
+
+              <NavLink
+                to="/hooks"
+                className={({ isActive }) =>
+                  isActive ? "bg-red-500 px-4 py-2 text-sm"
+                    : "px-4 py-2 text-sm hover:bg-gray-300"
+                }
+              >
+                Hooks
+              </NavLink>
+
+              <NavLink
+                to="/useeffect"
+                className={({ isActive }) =>
+                  isActive ? "bg-red-500 px-4 py-2 text-sm"
+                    : "px-4 py-2 text-sm hover:bg-gray-300"
+                }
+              >
+                useEffect
+              </NavLink>
+
             </div>
-          </Link>
-          <Link to="/">Home</Link>
+          )}
         </div>
 
-
+        {/* Home */}
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive
+              ? "bg-white text-black p-2 w-20 text-center rounded"
+              : "bg-amber-200 p-2 w-20 text-center rounded"
+          }
+        >
+          Home
+        </NavLink>
 
       </div>
-    </>
+    </div>
   )
 }
 

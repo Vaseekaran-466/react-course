@@ -1,4 +1,5 @@
 import { useState } from "react"
+import HideShow from "./HideShow"
 
 const Primitive = () => {
 
@@ -62,7 +63,7 @@ const Primitive = () => {
                     undefined : {undefined}
                 </h2>
             </div>
-
+          <HideShow/>
         </>
     )
 }
