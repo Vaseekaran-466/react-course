@@ -6,6 +6,7 @@ import NonPrmitive from "./component.jsx/NonPrmitive"
 import { Route, Routes } from "react-router-dom"
 import Home from "./component.jsx/Home"
 import Technical from "./component.jsx/props/Technical"
+import Login from "./Login"
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
    <nav>
     <Navbar/>
      
+  
    </nav>
    <div>
     <Routes>

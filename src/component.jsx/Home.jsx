@@ -1,4 +1,6 @@
 import Count from "./Count"
+import NumberList from "./NumberList"
+import Update from "./Update"
 
 
 const Home = () => {
@@ -8,6 +10,10 @@ const Home = () => {
     <div>
 
       <Count/>
+
+      <NumberList/>
+
+      <Update/>
       
     </div>
   )
